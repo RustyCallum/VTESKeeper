@@ -1,0 +1,22 @@
+<form class="formClass createTournamentForm" #form="ngForm" novalidate>
+    <div class="formBG">
+        <h2>Stwórz turniej</h2>
+        <div class="inputBG" mat-dialog-actions>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.name" name="name" placeholder="Nazwa" color="white">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.city" name="city" placeholder="Miejscowość">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput [matDatepicker]="dob" [(ngModel)]="data.date" name="date" placeholder="Data">
+                <mat-datepicker-toggle matSuffix [for]="dob"></mat-datepicker-toggle>
+                <mat-datepicker #dob></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="buttons">
+            <button class="button"mat-button mat-dialog-close>Zamknij</button>
+            <button class="button"mat-button [mat-dialog-close]="data">Utwórz</button>
+        </div>
+    </div>
+</form>

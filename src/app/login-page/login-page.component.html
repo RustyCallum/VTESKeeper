@@ -1,0 +1,19 @@
+<div class="logincontainer" [formGroup]="loginForm">
+    <div class="login">
+        <ul>
+            <li>
+                <input type="text" placeholder="Login" formControlName="username">
+            </li>
+        </ul>
+    </div>
+    <div class="password">
+        <ul>
+            <li>
+                <input type="password" placeholder="Hasło"  formControlName="password">
+            </li>
+        </ul>
+    </div>
+    <div class ="loginbutton">
+        <button class="button" (click)="login(loginForm)"> Zaloguj się </button>
+    </div>
+</div>

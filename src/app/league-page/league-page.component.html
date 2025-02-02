@@ -1,0 +1,18 @@
+<input class="leaguePlayerSearch" type="text" placeholder="Szukaj gracza.." [(ngModel)]="player">
+
+<table id="leaguePoints">
+    <thead>
+        <th>Numer VEKN</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Ilość punktów</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leaguePlayer of leaguePlayers | leagueFilter: player">
+            <td>{{leaguePlayer.VEKN}}</td>
+            <td>{{leaguePlayer.firstName}}</td>
+            <td>{{leaguePlayer.lastName}}</td>
+            <td>{{leaguePlayer.points}}</td>
+        </tr>
+    </tbody>
+</table>

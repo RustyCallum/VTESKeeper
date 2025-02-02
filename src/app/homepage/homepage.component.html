@@ -1,0 +1,48 @@
+<!-- <div class="city-form-group">
+    <strong>Miasto:</strong>
+    <select class="form-control"
+            name="city"
+            [(ngModel)]="city">
+      <option></option>      
+      <option *ngFor="let city of cities"
+              [value]="city">{{ city }}</option>
+    </select>
+</div> -->
+<div>
+    <input class="filterSearch" type="text" placeholder="Szukaj turnieju.." [(ngModel)]="uber">
+    <div class="addTournamentButton">
+        <button mat-button (click)="openDialog()" class="createTournamentButton">Stwórz turniej</button>
+    </div>
+    <!-- <div class="addTournamentButton">
+        <button mat-button (click)="openArchiveDialog()" class="createTournamentButton">Dodaj turniej</button>
+    </div> -->
+
+<!-- // filtering by players
+<div class="playerCount-form-group">
+    <strong>Ilość graczy:</strong>
+    <select class="form-control" name="playerNumber" [(ngModel)]="playerNumber">
+      <option></option>      
+      <option *ngFor="let playerNumber of playerNumbers" [value]="playerNumber">{{ playerNumber }}</option>
+    </select>
+</div> -->
+
+    <table class="pastTournaments">
+        <thead>
+            <th>Nazwa</th>
+            <th>Miejscowość</th>
+            <th>Data</th>
+            <th>Liczba Graczy</th>
+            <th>Zwycięzca</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let tournament of tournaments | sizeFilter:playerNumber | nameFilter: uber" [routerLink]="['/Tournament-Detail', tournament.id]">
+                <td>{{tournament.name}}</td>
+                <td>{{tournament.city}}</td>
+                <td>{{tournament.date | date:'longDate'}}</td>
+                <td>{{tournament.playerNumber}}</td>
+                <td>{{tournament.winner}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

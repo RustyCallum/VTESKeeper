@@ -1,0 +1,23 @@
+<form class="formClass" #form="ngForm" novalidate>
+    <div class="formBG">
+        <h2>Dodaj gracza</h2>
+        <div class="inputBG" mat-dialog-actions>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.vekn" name="vekn" placeholder="VEKN">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.firstName" name="firstName" placeholder="Imię" color="white">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.lastName" name="lastName" placeholder="Nazwisko">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput [(ngModel)]="data.city" name="city" placeholder="Miejscowość">
+            </mat-form-field>
+        </div>
+        <div class="buttons">
+            <button class="button"mat-button mat-dialog-close>Zamknij</button>
+            <button class="button"mat-button [mat-dialog-close]="data">Dodaj gracza</button>
+        </div>
+    </div>
+</form>

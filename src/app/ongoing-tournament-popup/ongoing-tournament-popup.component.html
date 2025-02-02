@@ -1,0 +1,64 @@
+<mat-dialog-content style="background-color: #323949">
+    <form (ngSubmit)="addPlayer()" #playerForm="ngForm">
+      <div>
+        <mat-form-field>
+          <mat-label>VEKN</mat-label>
+          <input matInput name="vekn" [(ngModel)]="newPlayer.vekn" required />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Imię</mat-label>
+          <input matInput name="firstName" [(ngModel)]="newPlayer.firstName" required />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Nazwisko</mat-label>
+          <input matInput name="lastName" [(ngModel)]="newPlayer.lastName" required />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Miejscowość</mat-label>
+          <input matInput name="playerCity" [(ngModel)]="newPlayer.playerCity" required />
+        </mat-form-field>
+      </div>
+      <button mat-button color="primary" type="submit" [disabled]="playerForm.invalid">
+        Dodaj gracza
+      </button>
+    </form>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>VEKN</th>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+          <th>Miejscowość</th>
+          <th>Dodaj gracza</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of playersList">
+          <td>{{ player.vekn }}</td>
+          <td>{{ player.firstName }}</td>
+          <td>{{ player.lastName }}</td>
+          <td>{{ player.playerCity }}</td>
+          <td>
+            <div class="addButton">
+              <button class="button" mat-button [mat-dialog-close]="player">Dodaj</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-dialog-content>
+  
+
+<!-- Zakomentowana inna możliwość wybierania graczy !!!NIEDOKONCZONE!!!
+<p>Selected:</p>
+<ul>
+    <li *ngFor="let i of players.selectedOptions.selected">
+      {{ i.value.vekn }}
+      {{ i.value.firstName }}
+      {{ i.value.lastName }}
+      {{ i.value.playerCity}}
+      <button class="button" mat-button [mat-dialog-close]="i.value">Dodaj</button>
+    </li>
+  </ul>
+  -->

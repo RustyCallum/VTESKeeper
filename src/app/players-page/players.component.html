@@ -1,0 +1,22 @@
+<input class="leaguePlayerSearch" type="text" placeholder="Szukaj gracza.." [(ngModel)]="players">
+
+<div class="addTournamentButton">
+    <button mat-button (click)="openDialog()" class="createTournamentButton">Dodaj gracza</button>
+</div>
+
+<table class="players">
+    <thead>
+        <th>Numer VEKN</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Miejscowość</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of Players | playerFilter: players">
+            <td>{{player.vekn}}</td>
+            <td>{{player.firstName}}</td>
+            <td>{{player.lastName}}</td>
+            <td>{{player.city}}</td>
+        </tr>
+    </tbody>
+</table>

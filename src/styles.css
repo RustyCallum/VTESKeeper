@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400&family=Poppins:wght@100;200;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Noto Serif", serif;
+    font-size: 18px;
+}
+
+body{
+    margin:0;
+    font-family: "Noto Serif", serif;
+    font-size: 18px;
+    background: #323949;
+}
+
+a{
+    text-decoration: none;
+}
+html, body { height: 100%; }
+
+.my-class .mat-dialog-content{
+    color: violet !important;
+    /* Other CSS Styles */
+}
+
+
+.error{
+    --mdc-snackbar-container-color: #c40000;
+    
+
+    color: white;
+}
+
+
+.success{
+    --mdc-snackbar-container-color: #00cc00;
+    color: white;
+}

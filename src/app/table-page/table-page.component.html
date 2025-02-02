@@ -1,0 +1,139 @@
+<div class="card">
+    <h2>Stoły</h2>
+    <mat-tab-group>
+        <mat-tab label="Runda 1">
+                <ng-container *ngFor="let table of tableList">
+                    <ng-container *ngIf="table.round == 1">
+                        <tr>
+                            <h1>Stół {{table.tableNumber}}</h1>
+                            <table class="table">
+                                <thead>
+                                    <th>Imię</th>
+                                    <th>Nazwisko</th>
+                                    <th>Seat</th>
+                                    <th>VP</th>
+                                    <th>GW</th>
+                                </thead>
+                                <ng-container *ngFor="let player of tablePlayers">
+                                    <!--<tr>asdf</tr>-->
+                                
+                                    <tbody>
+                                        <ng-container *ngIf="table.id == player.tableId">
+                                            <td>{{player.firstName}}</td>
+                                            <td>{{player.lastName}}</td>
+                                            <td>{{player.seat}}</td>
+                                            <td><input (focusout)="onKeyChangeVP($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.gw)" type="number" value="{{player.vp}}" /></td>
+                                            <td><input (focusout)="onKeyChangeGW($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.vp)" type="number" value="{{player.gw}}" /></td>
+                                        </ng-container>
+                                    </tbody>
+                                </ng-container>
+                            </table>
+                        </tr>
+                    </ng-container>
+                </ng-container>
+        </mat-tab>
+        <mat-tab label="Runda 2">
+            <ng-container *ngFor="let table of tableList">
+                <ng-container *ngIf="table.round == 2">
+                    <tr>
+                        <h1>Stół {{table.tableNumber}}</h1>
+                        <table class="table">
+                            <thead>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Seat</th>
+                                <th>VP</th>
+                                <th>GW</th>
+                            </thead>
+                            <ng-container *ngFor="let player of tablePlayers">
+                                <!--<tr>asdf</tr>-->
+                            
+                                <tbody>
+                                    <ng-container *ngIf="table.id == player.tableId">
+                                        <td>{{player.firstName}}</td>
+                                        <td>{{player.lastName}}</td>
+                                        <td>{{player.seat}}</td>
+                                        <td><input (focusout)="onKeyChangeVP($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.gw)" type="number" value="{{player.vp}}" /></td>
+                                        <td><input (focusout)="onKeyChangeGW($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.vp)" type="number" value="{{player.gw}}" /></td>
+                                    </ng-container>
+                                </tbody>
+                            </ng-container>
+                        </table>
+                    </tr>
+                </ng-container>
+            </ng-container>
+        </mat-tab>
+        <mat-tab label="Runda 3">
+            <ng-container *ngFor="let table of tableList">
+                <ng-container *ngIf="table.round == 3">
+                    <tr>
+                        <h1>Stół {{table.tableNumber}}</h1>
+                        <table class="table">
+                            <thead>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Seat</th>
+                                <th>VP</th>
+                                <th>GW</th>
+                            </thead>
+                            <ng-container *ngFor="let player of tablePlayers">
+                                <!--<tr>asdf</tr>-->
+                            
+                                <tbody>
+                                    <ng-container *ngIf="table.id == player.tableId">
+                                        <td>{{player.firstName}}</td>
+                                        <td>{{player.lastName}}</td>
+                                        <td>{{player.seat}}</td>
+                                        <td><input (focusout)="onKeyChangeVP($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.gw)" type="number" value="{{player.vp}}" /></td>
+                                        <td><input (focusout)="onKeyChangeGW($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.vp)" type="number" value="{{player.gw}}" /></td>
+                                    </ng-container>
+                                </tbody>
+
+                            </ng-container>
+                        </table>
+                    </tr>
+                </ng-container>
+            </ng-container>
+        </mat-tab>
+        <mat-tab label="Finał">
+            <ng-container *ngIf="areFinalistsChosen == false; then finalistsNotChosen else finalistsChosen"></ng-container>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+<ng-template #finalistsChosen>
+    <ng-container *ngFor="let table of tableList">
+        <ng-container *ngIf="table.round == 4">
+            <tr>
+                <h1>Finał</h1>
+                <table class="table">
+                    <thead>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Seat</th>
+                        <th>VP</th>
+                        <th>GW</th>
+                    </thead>
+                    <ng-container *ngFor="let player of finalistsArray; let i=index">
+                        <tbody>
+                            <ng-container *ngIf="table.id == player.tableId">
+                                <td>{{player.firstName}}</td>
+                                <td>{{player.lastName}}</td>
+                                <td>{{player.seat}}</td>
+                                <td><input (focusout)="onKeyChangeVP($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.gw)" type="number" value="{{player.vp}}" /></td>
+                                <td><input (focusout)="onKeyChangeGW($any($event.target).value, player.id, table.id, player.playerId, player.seat, player.vp)" type="number" value="{{player.gw}}" /></td>
+                                <button (click)="moveFinalistUp(i)"><mat-icon fontIcon="arrow_upward"></mat-icon></button>
+                                <button (click)="moveFinalistDown(i)"><mat-icon fontIcon="arrow_downward"></mat-icon></button>
+                            </ng-container>
+                        </tbody>
+                        
+                    </ng-container>
+                </table>
+            </tr>
+        </ng-container>
+    </ng-container>
+</ng-template>
+
+<ng-template #finalistsNotChosen>
+    <button (click)="ChooseFinalists()">Stwórz finał</button>
+</ng-template>

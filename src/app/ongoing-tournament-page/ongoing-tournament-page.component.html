@@ -1,0 +1,28 @@
+<h1>{{this.tournament.name}}</h1>
+
+<div class="card">
+    <h2>Panel uczestników</h2>
+    <button class="addPlayerButton" mat-button (click)="openDialog()">Dodaj gracza</button>
+    <form class="Form" [formGroup]="playerForm">
+        <table class="table">
+            <thead>
+                <th>VEKN</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Miejscowość</th>
+                <th>Talia</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let player of selectedPlayerList">
+                    <td>{{player.vekn}}</td>
+                    <td>{{player.firstName}}</td>
+                    <td>{{player.lastName}}</td>
+                    <td>{{player.city}}</td>
+                    <td><input id="files" class="file-input" type="file" formControlName="playerDeck" (change)="onFileUpload($event, player.id)"> <button (click)="onFileUpload($event, player.id)">Send</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="rollTablesButton" mat-button (click)="openRollDialog()">Losuj stoły</button>
+    </form>
+</div>

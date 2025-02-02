@@ -1,0 +1,215 @@
+<!-- <p>{{this.id}}</p> -->
+
+<mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center">
+    <mat-tab label="Runda 1">
+        <div>
+            <table class="pastTournaments">
+                <ng-container *ngFor="let item of tableList">
+                    <ng-container *ngIf="item.round == 1">
+                    <thead>
+                        <th colspan="6">
+                            <li>
+                                Stół {{item.tableNumber}}
+                            </li>
+                        </th>
+                    </thead>
+                    <thead>
+                        <th>Imię</th>
+                        <th>Nazisko</th>
+                        <th>Seat</th>
+                        <th>Zdobyte VP</th>
+                        <th>Zdobyte GW</th>
+                        <th>Talia</th>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let player of playerList">
+                            <tr>
+                                <ng-container *ngIf="item.id == player.tableId">
+                                <td>{{player.firstName}}</td>
+                                <td>{{player.lastName}}</td>
+                                <td>{{player.seat}}</td>
+                                <td>{{player.vp}}</td>
+                                <td>{{player.gw}}</td>
+                                <td><button (click)="getPlayerDeck(player.id, player.firstName, player.lastName)">Talia</button></td>
+                                </ng-container>
+                            </tr>
+                        </ng-container>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </tbody>
+                    </ng-container>
+                </ng-container>
+            </table>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Runda 2">
+        <div>
+            <table class="pastTournaments">
+                <ng-container *ngFor="let item of tableList">
+                    <ng-container *ngIf="item.round == 2">
+                        <thead>
+                            <th colspan="6">
+                                <li>
+                                    Stół {{item.tableNumber}}
+                                </li>
+                            </th>
+                        </thead>
+                        <thead>
+                            <th>Imię</th>
+                            <th>Nazisko</th>
+                            <th>Seat</th>
+                            <th>Zdobyte VP</th>
+                            <th>Zdobyte GW</th>
+                            <th>Talia</th>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let player of playerList">
+                                <tr>
+                                    <ng-container *ngIf="item.id == player.tableId">
+                                    <td>{{player.firstName}}</td>
+                                    <td>{{player.lastName}}</td>
+                                    <td>{{player.seat}}</td>
+                                    <td>{{player.vp}}</td>
+                                    <td>{{player.gw}}</td>
+                                    <td><button (click)="getPlayerDeck(player.id, player.firstName, player.lastName)">Talia</button></td>
+                                    </ng-container>
+                                </tr>
+                            </ng-container>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </tbody>
+                    </ng-container>
+                </ng-container>
+            </table>
+        </div>
+    </mat-tab>
+    <mat-tab label="Runda 3">
+        <div>
+            <table class="pastTournaments">
+                <ng-container *ngFor="let item of tableList">
+                    <ng-container *ngIf="item.round == 3">
+                        <thead>
+                            <th colspan="6">
+                                <li>
+                                    Stół {{item.tableNumber}}
+                                </li>
+                            </th>
+                        </thead>
+                        <thead>
+                            <th>Imię</th>
+                            <th>Nazisko</th>
+                            <th>Seat</th>
+                            <th>Zdobyte VP</th>
+                            <th>Zdobyte GW</th>
+                            <th>Talia</th>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let player of playerList">
+                                <tr>
+                                    <ng-container *ngIf="item.id == player.tableId">
+                                    <td>{{player.firstName}}</td>
+                                    <td>{{player.lastName}}</td>
+                                    <td>{{player.seat}}</td>
+                                    <td>{{player.vp}}</td>
+                                    <td>{{player.gw}}</td>
+                                    <td><button (click)="getPlayerDeck(player.id, player.firstName, player.lastName)">Talia</button></td>
+                                    </ng-container>
+                                </tr>
+                            </ng-container>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </tbody>
+                    </ng-container>
+                </ng-container>
+            </table>
+        </div>
+    </mat-tab>
+    <mat-tab label="Finał">
+        <div>
+            <table class="pastTournaments">
+                <ng-container *ngFor="let item of tableList">
+                    <ng-container *ngIf="item.round == 4">
+                        <thead>
+                            <th colspan="6">
+                                <li>
+                                    Stół finałowy
+                                </li>
+                            </th>
+                        </thead>
+                        <thead>
+                            <th>Imię</th>
+                            <th>Nazisko</th>
+                            <th>Seat</th>
+                            <th>Zdobyte VP</th>
+                            <th>Zdobyte GW</th>
+                            <th>Talia</th>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let player of playerList">
+                                <tr>
+                                    <ng-container *ngIf="item.id == player.tableId">
+                                    <td>{{player.firstName}}</td>
+                                    <td>{{player.lastName}}</td>
+                                    <td>{{player.seat}}</td>
+                                    <td>{{player.vp}}</td>
+                                    <td>{{player.gw}}</td>
+                                    <td><button (click)="getPlayerDeck(player.id, player.firstName, player.lastName)">Talia</button></td>
+                                    </ng-container>
+                                </tr>
+                            </ng-container>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </tbody>
+                    </ng-container>
+                </ng-container>
+            </table>
+        </div>
+    </mat-tab>
+    <mat-tab label="Całość">
+        <input class="filterSearch" type="text" placeholder="Przeszukaj turniej.." [(ngModel)]="filter">
+        <div>
+            <table class="pastTournaments">
+                    <thead>
+                        <th>Stół</th>
+                        <th>Runda</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Zdobyte VP</th>
+                        <th>Zdobyte GW</th>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor="let player of playerList | allTournamentFilter: filter">
+                                <td>Stół {{player.tableNumber}}</td>
+                                <td>
+                                    <ng-container *ngFor="let table of tableList">
+                                        <ng-container *ngIf="table.id == player.tableId">
+                                            <ng-container>
+                                                <ng-container *ngIf="table.round == 4">
+                                                    Finał
+                                                </ng-container>
+                                                <ng-container *ngIf="table.round != 4">
+                                                    Runda {{table.round}}
+                                                </ng-container>
+                                            </ng-container>
+                                        </ng-container>
+                                    </ng-container>
+                                </td>
+                                <td>{{player.firstName}}</td>
+                                <td>{{player.lastName}}</td>
+                                <td>{{player.vp}}</td>
+                                <td>{{player.gw}}</td>
+                            </tr>
+                    </tbody>
+            </table>
+        </div>
+    </mat-tab>
+</mat-tab-group>
