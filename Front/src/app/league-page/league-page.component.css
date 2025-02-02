@@ -1,0 +1,44 @@
+#leaguePoints{
+    margin-top: 4%;
+    width:90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#leaguePoints td, #leaguePoints th {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+#leaguePoints tr:nth-child(odd){background-color: #4c5265;}
+
+#leaguePoints tr:hover {
+    background-color: #212129;
+    transition-duration: 0.2s;
+}
+
+#leaguePoints th {
+    padding-top: 12px;
+    padding-bottom: 16px;
+    text-align: left;
+    background-color: #323949;
+    color: #f0f8ff;
+}
+
+#leaguePoints tr {
+    padding-top: 12px;
+    padding: 20px;
+    text-align: left;
+    background-color: #40445a;
+    color: #f0f8ff;
+}
+
+
+.leaguePlayerSearch{
+  float:right;
+  position:relative;
+  margin-right: 25px;
+  margin-top: 24px;
+  border-radius: 10px;
+}

@@ -1,0 +1,138 @@
+.table{
+    align-items: center;
+    margin-top: 6%;
+    width:60%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h2{
+    color:white;
+    font-family: "Noto Serif", serif;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    top:15px;
+    margin-top: 2%;
+}
+
+span{
+    float:right;
+    position: relative;
+    bottom: 32px;
+    right:70px;
+}
+
+.file-upload{
+    background-color: #4c5265;
+    border: none;
+    color: white;
+    float:right;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-size:20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    width: 10%;
+    height:40px;
+    margin-left: 20px;
+    right:400px;
+    bottom: 43px;
+    position: relative;
+}
+
+.input{
+    background-color: #323949;
+    position: relative;
+    left:150px;
+    width: 282px;
+    margin-top: 3%;
+    color:white;
+    margin-right:1px;
+    height: 45px;
+    text-align: left;
+}
+
+.addPlayerButton{
+    background-color: #4c5265;
+    position:relative;
+    float:right;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size:20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    width: 10%;
+    height:40px;
+    bottom:43px;
+    right:45%;
+    margin-bottom: 10%;
+    margin-top: 4%;
+}
+
+.rollTablesButton{
+    background-color: #4c5265;
+    position:relative;
+    float:right;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size:20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    width: 10%;
+    height:40px;
+    bottom:43px;
+    right:0%;
+    margin-bottom: 10%;
+    margin-top: 4%;
+}
+
+.Form{
+    margin-top: 5%;
+}
+
+h1{
+    color:white;
+    font-family: "Noto Serif", serif;
+    font-size: 45px;
+    text-align: center;
+    position: relative;
+    top:15px;
+}
+
+.card td, .card th {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+.card tr:nth-child(odd){background-color: #4c5265;}
+
+.card tr:hover {
+  background-color: #212129;
+  transition-duration: 0.2s;
+}
+
+.card th {
+    padding-top: 12px;
+    padding-bottom: 16px;
+    text-align: left;
+    background-color: #323949;
+    color: #f0f8ff;
+}
+
+.card tr {
+    padding-top: 12px;
+    padding: 20px;
+    text-align: left;
+    background-color: #40445a;
+    color: #f0f8ff;
+}

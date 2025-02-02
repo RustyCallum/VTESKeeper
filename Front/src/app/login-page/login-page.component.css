@@ -1,0 +1,60 @@
+
+ul{
+    padding-inline-start: 0;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.logincontainer{
+    align-items: center;
+    margin-top: 15%;
+}
+
+.login{
+    text-align: center;
+}
+
+.password{
+    text-align: center;
+}
+
+input[type=text]{
+    width:20%;
+    height:50px;
+    font-size: 20px;
+}
+
+input[type=password]{
+    width:20%;
+    height:50px;
+    font-size: 20px;
+}
+
+.loginbutton{
+    text-align: center;
+}
+
+.button {
+    background-color: #4c5265;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    font-size:20px;
+    cursor: pointer;
+    border-radius: 8px;
+    size: 2000px;
+    transition-duration: 0.3s;
+    width: 20%;
+    height:50px;
+}
+
+.loginbutton :hover{
+    background-color: #212129;
+}

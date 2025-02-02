@@ -1,0 +1,12 @@
+button{
+    background: none;
+    border: none;
+    size: 0.5px;
+    float:right;
+    margin: 0px;
+    display:inline
+}
+
+h3{
+    display: inline;
+}
